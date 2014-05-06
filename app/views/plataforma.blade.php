@@ -1,0 +1,78 @@
+<html>
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/cerulean/bootstrap.min.css" rel="stylesheet">
+		<link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">	
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="#">Creazion © RedIglesia>></a>
+		  </div>
+
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Link</a></li>
+		      <li><a href="#">Link</a></li>
+		      
+		    </ul>
+		    
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#">Link</a></li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user->email}} <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Registrarse</a></li>
+		          <li><a href="#">Cerrar Sesión</a></li>
+		          <li><a href="#">Pagina Oficial</a></li>
+		          <li class="divider"></li>
+		          <li><a href="/logout">Cerrar Sesión</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </div><!-- /.navbar-collapse -->
+		</nav>
+
+		<div class="container">
+			@if (Session::has('message'))
+				<div class="flash alert">
+					<p>{{ Session::get('message') }}</p>
+				</div>
+			@endif
+<!-- CONTENEDOR -->		
+
+		</div>
+		<img src="..." class="img-circle">
+		<ul class="thumbnails">
+		  <li class="span4">
+		    <div class="thumbnail">
+		      <img data-src="holder.js/300x200" alt="">
+		      <h3>Thumbnail label</h3>
+		      <p>Thumbnail caption...</p>
+		    </div>
+		    <div class="thumbnail">
+		      <img data-src="holder.js/300x200" alt="">
+		      <h3>Thumbnail label</h3>
+		      <p>Thumbnail caption...</p>
+		    </div>
+
+		  </li>
+		 
+		</ul>
+		@yield('container')
+	</body>
+</html>
